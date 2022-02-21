@@ -1,8 +1,8 @@
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
-    <h1 class="h3 mb-0 text-gray-800">Create User</h1>
+    <h1 class="h3 mb-0 text-gray-800">Edit User</h1>
 </div>
 <div class="container">
-    <form [formGroup]="userFormData" (ngSubmit)="postFormData()">
+    <form [formGroup]="userFormData" (ngSubmit)="editFormData()">
     <div class="row">
        
         <div class="col-lg-6">
@@ -30,7 +30,7 @@
                 </select>
                </div>
                <div class="col-lg-10">
-                <input pattern="^[6-9]\d*$" [ngClass]="{'form-error':!userFormData.get('phone').valid && userFormData.get('phone').dirty,
+                <input [ngClass]="{'form-error':!userFormData.get('phone').valid && userFormData.get('phone').dirty,
                 'form-success':userFormData.get('phone').valid && userFormData.get('phone').dirty }"
                  type="number"formControlName="phone" class="form-control">
                 <span *ngIf="!userFormData.get('phone').valid  && userFormData.get('phone').dirty" style="color: red;">Enter a Valid Phone number</span>
