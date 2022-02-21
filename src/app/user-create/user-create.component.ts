@@ -28,14 +28,8 @@ export class UserCreateComponent implements OnInit {
           'skillName' : new FormControl("",Validators.required),
           'ratting' : new FormControl()
         }),
-        new FormGroup({
-          'skillName' : new FormControl("",Validators.required),
-          'ratting' : new FormControl()
-        }),
-        new FormGroup({
-          'skillName' : new FormControl("",Validators.required),
-          'ratting' : new FormControl()
-        }),
+        
+       
       ])
     })
   }
